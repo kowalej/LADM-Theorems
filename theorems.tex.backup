@@ -1,0 +1,211 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[hmargin=30mm, vmargin=15mm]{geometry}
+\usepackage{CalcStyleV8}
+\usepackage[linkcolor=black, colorlinks=true, pagebackref=true]{hyperref}
+
+%opening
+\title{1FC3 Theorem List}
+\author{JK}
+
+\newenvironment{theoremlist}{
+\begin{description}
+  \setlength{\itemsep}{1.5pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}{\end{description}}
+
+\DeclareMathSymbol{\mlq}{\mathord}{operators}{``}
+\DeclareMathSymbol{\mrq}{\mathord}{operators}{`'}
+
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+
+\newpage
+\tableofcontents %put toc in
+\thispagestyle{empty}
+
+\cleardoublepage %start new page
+
+\setcounter{page}{1} %reset the page counter
+
+\section{Equivalence}
+
+\begin{theoremlist}
+\item[(3.1) Axiom, Associativity of $\equiv$:] 					$ ((p \equiv q) \equiv r) \equiv (p \equiv (q \equiv r)) $
+\item[(3.2) Axiom, Symmetry of $\equiv$:] 					$ p \equiv q \equiv q \equiv p $
+\item[(3.3) Axiom, Identity of $\equiv$:] 					$ \true \equiv q \equiv q $
+\item[(3.4)] 									$ \true $
+\item[(3.5) Reflexivity of $ \equiv$:] 						$ p \equiv p $
+\item[(3.7) Metatheorem:] 							Any two theorems are equivalent.
+\end{theoremlist}
+
+
+\section{Negation}
+
+\begin{theoremlist}
+\item[(3.8) Axiom, Definition of $\false$:] 					$ \false \equiv \lnot \true $
+\item[(3.9) Axiom, Distributivity of $\lnot$ over $\equiv$:]			$ \lnot (p \equiv q) \equiv (\lnot p \equiv q) $
+\item[(3.10) Axiom, Definition of $\nequiv$:]					$ (p \nequiv q) \equiv \lnot (p \equiv q) $
+\item[(3.11)] 									$ \lnot p \equiv q \equiv p \equiv \lnot q $
+\item[(3.12) Double negation:]							$ \lnot\lnot p \equiv p $
+\item[(3.13) Negation of $\false$:]						$ \lnot \false \equiv \true $
+\item[(3.14)]									$ (p \nequiv q) \equiv \lnot p \equiv q $
+\item[(3.15)] 									$ \lnot p \equiv p \equiv \false $
+\item[(3.16) Symmetry of $\nequiv$:]						$ (p \nequiv q) \equiv (q \nequiv p) $
+\item[(3.17) Associativity of $\nequiv$:]					$ ((p \nequiv q) \nequiv r) \equiv (p \nequiv (q \nequiv r)) $
+\item[(3.18) Mutual associativity:]						$ ((p \nequiv q) \equiv r) \equiv (p \nequiv (q \equiv r)) $
+\item[(3.19) Mutual interchangeability:]					$ p \nequiv q \equiv r \equiv p \equiv q \nequiv r $
+\end{theoremlist}
+
+
+
+\section{Disjunction}
+
+\begin{theoremlist}
+\item[(3.24) Axiom, Symmetry of $\lor$:] 					$ p \lor q \equiv q \lor p $
+\item[(3.25) Axiom, Associativity of $\lor$:]					$ (p \lor q) \lor r \equiv p \lor (q \lor r) $ 
+\item[(3.26) Axiom, Idempotency of $\lor$:]					$ p \lor p \equiv p $
+\item[(3.27) Axiom, Distributivity of $\lor$ over $\equiv$:]			$ p \lor (q \equiv r) \equiv p \lor q \equiv p \lor r $
+\item[(3.28) Axiom, Excluded Middle:]						$ p \lor \lnot p $
+\item[(3.29) Zero of $\lor$:]							$ p \lor \true \equiv true $
+\item[(3.30) Identity of $\lor$:]						$ p \lor \false \equiv p $
+\item[(3.31) Distributivity of $\lor$ over $\lor$:]				$ p \lor (q \lor r) \equiv (p \lor q) \lor (p \lor r) $
+\item[(3.32)]									$ p \lor q \equiv p \lor \lnot q \equiv p $
+\end{theoremlist}
+
+
+\section{Conjunction}
+
+\begin{theoremlist}
+\item[(3.35) Axiom, Golden Rule:]						$ p \land q \equiv p \equiv q \equiv p \lor q $
+\item[(3.36) Symmetry of $\land$:]						$ p \land q \equiv q \land p $
+\item[(3.37) Associativity of $\land$:]						$ (p \land q) \land r \equiv p \land (q \land r) $
+\item[(3.38) Idempotency of $\land$:]						$ p \land p \equiv p $
+\item[(3.39) Identity of $\land$:]						$ p \land \true \equiv p $
+\item[(3.40) Zero of $\land$:]							$ p \land \false \equiv \false  $
+\item[(3.41) Distributivity of $\land$ over $\land$:]				$ p \land (q \land r) \equiv (p \land q) \land (p \land r) $
+\item[(3.42) Contradiction:]							$ p \land \lnot p \equiv \false $
+\item[(3.43) Absorption:]						
+  \begin{theoremlist}
+  \item %intentionally blank
+  \item										$ p \land (p \lor q) \equiv p $
+  \item 									$ p \lor (p \land q) \equiv p $
+  \end{theoremlist}                  						                               	              
+\item[(3.44) Absorption:]
+  \begin{theoremlist}
+  \item %intentionally blank
+  \item										$ p \land (\lnot p \lor q) \equiv p \land q $
+  \item 									$ p \lor (\lnot p \land q) \equiv p \lor q $
+  \end{theoremlist}      
+\item[(3.45) Distributivity of $\lor$ over $\land$:]				$ p \lor (q \land r) \equiv (p \lor q) \land (p \lor r) $
+\item[(3.45) Distributivity of $\land$ over $\lor$:]				$ p \land (q \lor r) \equiv (p \land q) \lor (p \land r) $
+\item[(3.47) De Morgan:]
+  \begin{theoremlist}
+  \item %intentionally blank
+  \item										$ \lnot(p \land q) \equiv \lnot p \lor \lnot q $
+  \item 									$ \lnot(p \lor q) \equiv \lnot p \land \lnot q $
+  \end{theoremlist}      
+\item[(3.48) Axiom, Golden Rule:]						$	$
+\item[(3.49) Axiom, Golden Rule:]						$	$
+\item[(3.50) Axiom, Golden Rule:]						$	$
+\item[(3.51) Replacement:]							$ (p \equiv q ) \land (r \equiv p) \equiv (p \equiv q) \land (r \equiv q) $
+\item[(3.52) Definition of $\equiv$:]						$ p \equiv q \equiv (p \land q) \lor (\lnot p \land \lnot q) $
+\item[(3.53) Definition of $\nequiv$ (Exclusive or):]				$ p \nequiv q \equiv (\lnot p \land q) \lor (p \land \lnot q) $
+\end{theoremlist}
+
+
+\section{Implication}
+
+\begin{theoremlist}
+\item[(3.57) Axiom, Definition of Implication:]					$ p \implies q \equiv p \lor q \equiv q $
+\item[(3.58) Axiom, Consequence:]						$ p \follows q \equiv q \implies p $
+\item[(3.59) (Alternative) Definition of Implication:]				$ p\implies q \equiv \lnot p \lor q $
+\item[(3.60) (Dual) Definition of Implication:]					$ p \implies q \equiv p \land q \equiv p $
+\item[(3.61) Contrapositive:]							$ p \implies q \equiv \lnot q \implies \lnot p $
+
+\item[Ex. 3.45]									$ p \implies q \equiv \lnot p \lor \lnot q \equiv \lnot p $
+\item[Ex. 3.46]									$ p \implies q \equiv \lnot p \land \lnot q \equiv \lnot q $
+\item[(3.62:]									$ p \implies (q \equiv r) \equiv p \land q \equiv p \land r $
+\item[(3.63) Distributivity of $\implies$ over $\equiv$:]			$ p \implies (q \equiv r) \equiv p \implies q \equiv p \implies r $
+\item[(3.64) Self-distributivity of $\implies$:]				$ p \implies (q \implies r) \equiv (p \implies q) \implies (p \implies r)$
+\item[(3.65) Shunting:]								$ p \land q \implies r \equiv p \implies (q \implies r) $
+\item[(3.66)]									$ p \land (p \implies q) \equiv p \land q $
+\item[(3.67)]									$ p \land (q \implies p) \equiv p $
+\item[(3.68)]									$ p \lor (p \implies q) \equiv \true $
+\item[(3.69)]									$ p \lor (q \implies p) \equiv q \implies p $
+\item[(3.70)]									$ p \lor q \implies p \land q \equiv p \equiv q$
+\item[(3.71) Reflexivity of $\implies$:]					$ p \implies p \equiv \true $
+\item[(3.72) Right zero of $\implies$:]						$ p \implies \true \equiv \true $
+\item[(3.73) Left identity of $\implies$:]					$ \true \implies p \equiv p $
+\item[(3.74)]									$ p \implies \false \equiv \lnot p $
+\item[(3.75)]									$ \false \implies p \equiv true $
+\item[(3.76) Weakening/strengthening:]
+  \begin{theoremlist}
+  \item %intentionally blank
+  \item[(a)]									$ p \implies p \lor q $
+  \item[(b)] 									$ p \land q \implies p $
+  \item[(c)] 									$ p \land q \implies p \lor q $
+  \item[(d)] 									$ p \lor (q \land r) \implies p \lor q $
+  \item[(e)] 									$ p \land q \implies p \land (p \lor r) $
+  \end{theoremlist} 
+\item[(3.77) Modus ponens:]							$ p \land (p \implies q) \implies q $
+\item[(3.78) Case analysis:]							$ (p \implies r) \land (q \implies r) \equiv (p \lor q \implies r) $
+\item[(3.79) Case analysis:]							$ (p \implies r) \land (\lnot p \implies r) \equiv r $							
+\item[(3.80) Mutual implication:]						$ (p \implies q) \land (q \implies p) \equiv p \equiv q $
+\item[(3.80b) Reflexivity wrt. Equivalence:]					$ (p \equiv q) \implies (p \implies q) $
+\item[(3.81) Antisymmetry:]							$ (p \implies q) \land (q \implies p) \implies p \equiv q $
+\item[(3.82) Transitivity:]							
+  \begin{theoremlist}
+  \item %intentionally blank
+  \item[(a)]									$ (p \implies q) \land (q \implies r) \implies (p \implies r) $
+  \item[(b)] 									$ (p \equiv q) \land (q \implies r) \implies (p \implies r) $
+  \item[(c)] 									$ (p \implies q) \land (q \equiv r) \implies (p \implies r) $
+  \end{theoremlist}
+\item[Ex. 6.3.A]								$ p \implies (q \land r) \equiv (p \implies q) \land (p \implies r) $
+\item[Ex. 6.3.B]								$ (p \land q) \lor (\lnot p \land r) \equiv (p \implies q) \land (\lnot p \implies r) $
+\item[Ex. 6.3.C]								$ (p \land q) \lor (\lnot p \land r) \equiv (\lnot p \lor r) \land (p \lor r) $
+\item[Ex. 6.3.D]								$ \lnot p \lor (p \implies q) \equiv p \implies q $
+\item[Ex. 6.3.E]								$ p \lor (\lnot p \implies q) \equiv \lnot p \implies q $
+\item[(4.1)]									$ p \implies (q \implies p) $
+\item[(4.2) Monotonicity of $\lor$:]						$ (p \implies q) \implies (p \lor r \implies q \lor r) $
+\item[(4.3) Monotonicity of $\land$:]						$ (p \implies q) \implies p \land r \implies q \land r $
+\item[(4.4) (Extended) Deduction Theorem:]					Suppose adding $P_1 ,\ldots, P_n$ as axioms to
+										propositional logic $\mathbf{E}$, with the variables of the $Pi$ considered to be constants,
+										allows $Q$ to be proved.
+										Then $P_1 \land \ldots \land P_n \implies Q$ is a theorem.
+\item[(4.6)]									$ (p \lor q \lor r) \land (p \implies s) \land (q \implies s) \land (r \implies s) \implies s $
+
+
+\end{theoremlist}
+
+
+\section{Substitution}
+
+\begin{theoremlist}
+\item[(3.84a)]									$ (e = f) \land E[z \becomes e] \equiv (e = f) \land E[z \becomes f] $
+\item[(3.84b)]									$ (e = f) \implies E[z \becomes e] \equiv (e = f) \implies E[z \becomes f] $
+\item[(3.84c)]									$ q \land (e = f) \implies E[z \becomes e] \equiv q \land (e = f) \implies E[z \becomes f] $
+\item[(3.85a) Replace by $\true$:]						$ p \implies E[z \becomes p] \equiv p \implies E[z \becomes \true] $
+\item[(3.85b) Replace by $\true$:]						$ q \land p \implies E[z \becomes p] \equiv \land p \implies E[z \becomes \true] $
+\item[(3.86a) Replace by $\false$:]						$ E[z \becomes p] \implies p \equiv E[z \becomes \false] \implies p $
+\item[(3.86b) Replace by $\false$:]						$ E[z \becomes p] \implies p \lor q \equiv E[z \becomes \false] \implies p \lor q $
+\item[(3.87) Replace by $\true$:]						$ p \land E[z \becomes p] \equiv p \land E[z \becomes \true] $
+\item[(3.88) Replace by $\false$:]						$ p \lor E[z \becomes p] \equiv p \lor E[z \becomes \false] $
+\item[(3.89) Shannon:]								$ E[z \becomes p] \equiv (p \land E[z \becomes \true]) \lor (\lnot p \land E[z \becomes \false]) $
+\item[(4.5) Metatheorem Case Analysis (Shannon):]				$\break$ If $E[z \becomes \true]$ and $E[z \becomes \false]$ are theorems, then so is $E[z \becomes p] $ 
+\end{theoremlist}
+
+
+\section{Quantification}
+
+\begin{theoremlist}
+\item[(8.11) Substitution:]							Provided $\lnot occurs(\mlq y \mrq,\mlq x,F \mrq)$
+
+\end{theoremlist}
+
+
+\end{document}

@@ -1,0 +1,7 @@
+\contentsline {section}{\numberline {1}Equivalence}{1}{section.1}
+\contentsline {section}{\numberline {2}Negation}{1}{section.2}
+\contentsline {section}{\numberline {3}Disjunction}{1}{section.3}
+\contentsline {section}{\numberline {4}Conjunction}{1}{section.4}
+\contentsline {section}{\numberline {5}Implication}{2}{section.5}
+\contentsline {section}{\numberline {6}Substitution}{3}{section.6}
+\contentsline {section}{\numberline {7}Quantification}{3}{section.7}
