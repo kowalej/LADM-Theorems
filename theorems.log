@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.1.10)  5 APR 2012 21:57
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.1.10)  6 APR 2012 22:48
 entering extended mode
  %&-line parsing enabled.
 **theorems.tex
@@ -382,8 +382,9 @@ LaTeX Font Info:    Try loading font information for U+stmry on input line 25.
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.112 \item[(3.48) Axiom, Golden Rule:]
-                                       						$	$ [1
+l.112 \item[(3.48):]
+                    									$ p \land q \equiv p \land \lnot q \equiv \lnot...
+[1
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
  been already used, duplicate ignored
@@ -396,27 +397,37 @@ Underfull \hbox (badness 10000) in paragraph at lines 199--200
 []$
  []
 
-[3] (./theorems.aux) ) 
+
+Overfull \hbox (0.72461pt too wide) in paragraph at lines 227--229
+[]\OT1/cmr/m/n/10 Provided $\OMS/cmsy/m/n/10 :\OT1/cmr/m/it/10 occurs\OT1/cmr/m
+/n/10 (`\OT1/cmr/m/it/10 y\OT1/cmr/m/n/10 '\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 `
+\OT1/cmr/m/it/10 R\OT1/cmr/m/n/10 `)$ and $\OMS/cmsy/m/n/10 :\OT1/cmr/m/it/10 o
+ccurs\OT1/cmr/m/n/10 (`\OT1/cmr/m/it/10 x\OT1/cmr/m/n/10 '\OML/cmm/m/it/10 ; \O
+T1/cmr/m/n/10 `\OT1/cmr/m/it/10 S\OT1/cmr/m/n/10 `)$, and
+ []
+
+[3] [4] [5] [6] (./theorems.aux) ) 
 Here is how much of TeX's memory you used:
- 5843 strings out of 495061
- 82208 string characters out of 1182621
- 178772 words of memory out of 3000000
- 8901 multiletter control sequences out of 15000+50000
- 15131 words of font info for 58 fonts, out of 3000000 for 9000
+ 5873 strings out of 495061
+ 82621 string characters out of 1182621
+ 180772 words of memory out of 3000000
+ 8915 multiletter control sequences out of 15000+50000
+ 15438 words of font info for 59 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 38i,6n,36p,357b,368s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/
-cmbx10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share
-/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-texli
-ve/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/typ
-e1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-texlive/fonts/type1/public/am
-sfonts/cm/cmr7.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cms
-y10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti10.pfb></u
-sr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti7.pfb>
-Output written on theorems.pdf (5 pages, 131310 bytes).
+ 38i,6n,36p,357b,436s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texmf-texlive/fonts/type1/public/
+amsfonts/cm/cmbx10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm
+/cmbx12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb
+></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share
+/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texli
+ve/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-texlive/fonts/typ
+e1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-texlive/fonts/type1/public/ams
+fonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cm
+ti10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti7.pfb></u
+sr/share/texmf-texlive/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on theorems.pdf (8 pages, 159940 bytes).
 PDF statistics:
- 104 PDF objects out of 1000 (max. 8388607)
- 12 named destinations out of 1000 (max. 500000)
- 57 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 190 PDF objects out of 1000 (max. 8388607)
+ 28 named destinations out of 1000 (max. 500000)
+ 161 words of extra memory for PDF output out of 10000 (max. 10000000)
 

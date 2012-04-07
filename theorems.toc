@@ -3,5 +3,18 @@
 \contentsline {section}{\numberline {3}Disjunction}{1}{section.3}
 \contentsline {section}{\numberline {4}Conjunction}{1}{section.4}
 \contentsline {section}{\numberline {5}Implication}{2}{section.5}
-\contentsline {section}{\numberline {6}Substitution}{3}{section.6}
+\contentsline {section}{\numberline {6}Substitution (Leibniz as an axiom)}{3}{section.6}
 \contentsline {section}{\numberline {7}Quantification}{3}{section.7}
+\contentsline {subsection}{\numberline {7.1}General laws of quantification}{3}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}Universal Quantification}{3}{subsection.7.2}
+\contentsline {subsection}{\numberline {7.3}Existential Quantification}{4}{subsection.7.3}
+\contentsline {section}{\numberline {8}Sets}{4}{section.8}
+\contentsline {subsection}{\numberline {8.1}General set theorems}{4}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}Operations on sets}{5}{subsection.8.2}
+\contentsline {subsection}{\numberline {8.3}Basic properties of union}{5}{subsection.8.3}
+\contentsline {subsection}{\numberline {8.4}Basic properties of intersection}{5}{subsection.8.4}
+\contentsline {subsection}{\numberline {8.5}Properties of combinations of union and intersection}{5}{subsection.8.5}
+\contentsline {subsection}{\numberline {8.6}Properties of set difference}{5}{subsection.8.6}
+\contentsline {subsection}{\numberline {8.7}Implication versus subset}{6}{subsection.8.7}
+\contentsline {subsection}{\numberline {8.8}Subsets}{6}{subsection.8.8}
+\contentsline {subsection}{\numberline {8.9}Powersets}{6}{subsection.8.9}

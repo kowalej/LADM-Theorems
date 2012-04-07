@@ -81,7 +81,7 @@
 \section{Conjunction}
 
 \begin{theoremlist}
-\item[(3.35) Axiom, Golden Rule:]						$ p \land q \equiv p \equiv q \equiv p \lor q $
+\item[(3.35) Axiom, Golden rule:]						$ p \land q \equiv p \equiv q \equiv p \lor q $
 \item[(3.36) Symmetry of $\land$:]						$ p \land q \equiv q \land p $
 \item[(3.37) Associativity of $\land$:]						$ (p \land q) \land r \equiv p \land (q \land r) $
 \item[(3.38) Idempotency of $\land$:]						$ p \land p \equiv p $
@@ -92,14 +92,14 @@
 \item[(3.43) Absorption:]						
   \begin{theoremlist}
   \item %intentionally blank
-  \item										$ p \land (p \lor q) \equiv p $
-  \item 									$ p \lor (p \land q) \equiv p $
+  \item[(a)]									$ p \land (p \lor q) \equiv p $
+  \item[(b)] 									$ p \lor (p \land q) \equiv p $
   \end{theoremlist}                  						                               	              
 \item[(3.44) Absorption:]
   \begin{theoremlist}
   \item %intentionally blank
-  \item										$ p \land (\lnot p \lor q) \equiv p \land q $
-  \item 									$ p \lor (\lnot p \land q) \equiv p \lor q $
+  \item[(a)]									$ p \land (\lnot p \lor q) \equiv p \land q $
+  \item[(b)] 									$ p \lor (\lnot p \land q) \equiv p \lor q $
   \end{theoremlist}      
 \item[(3.45) Distributivity of $\lor$ over $\land$:]				$ p \lor (q \land r) \equiv (p \lor q) \land (p \lor r) $
 \item[(3.45) Distributivity of $\land$ over $\lor$:]				$ p \land (q \lor r) \equiv (p \land q) \lor (p \land r) $
@@ -109,9 +109,9 @@
   \item										$ \lnot(p \land q) \equiv \lnot p \lor \lnot q $
   \item 									$ \lnot(p \lor q) \equiv \lnot p \land \lnot q $
   \end{theoremlist}      
-\item[(3.48) Axiom, Golden Rule:]						$	$
-\item[(3.49) Axiom, Golden Rule:]						$	$
-\item[(3.50) Axiom, Golden Rule:]						$	$
+\item[(3.48):]									$ p \land q \equiv p \land \lnot q \equiv \lnot p $
+\item[(3.49):]									$ p \land (q \equiv r) \equiv p \land q \equiv p \land r \equiv p $
+\item[(3.50):]									$ p \land (q \equiv p) \equiv p \land q	$
 \item[(3.51) Replacement:]							$ (p \equiv q ) \land (r \equiv p) \equiv (p \equiv q) \land (r \equiv q) $
 \item[(3.52) Definition of $\equiv$:]						$ p \equiv q \equiv (p \land q) \lor (\lnot p \land \lnot q) $
 \item[(3.53) Definition of $\nequiv$ (Exclusive or):]				$ p \nequiv q \equiv (\lnot p \land q) \lor (p \land \lnot q) $
@@ -183,7 +183,7 @@
 \end{theoremlist}
 
 
-\section{Substitution}
+\section{Substitution (Leibniz as an axiom)}
 
 \begin{theoremlist}
 \item[(3.84a)]									$ (e = f) \land E[z \becomes e] \equiv (e = f) \land E[z \becomes f] $
@@ -196,16 +196,127 @@
 \item[(3.87) Replace by $\true$:]						$ p \land E[z \becomes p] \equiv p \land E[z \becomes \true] $
 \item[(3.88) Replace by $\false$:]						$ p \lor E[z \becomes p] \equiv p \lor E[z \becomes \false] $
 \item[(3.89) Shannon:]								$ E[z \becomes p] \equiv (p \land E[z \becomes \true]) \lor (\lnot p \land E[z \becomes \false]) $
-\item[(4.5) Metatheorem Case Analysis (Shannon):]				$\break$ If $E[z \becomes \true]$ and $E[z \becomes \false]$ are theorems, then so is $E[z \becomes p] $ 
+\item[(4.5) Metatheorem, Case analysis (Shannon):]				$\break$ If $E[z \becomes \true]$ and $E[z \becomes \false]$ are theorems, then so is $E[z \becomes p] $ 
 \end{theoremlist}
 
 
-\section{Quantification}
+\section{General Quantification}
 
 \begin{theoremlist}
-\item[(8.11) Substitution:]							Provided $\lnot occurs(\mlq y \mrq,\mlq x,F \mrq)$
+\item[(8.11) Substitution:]							Provided $ \lnot occurs(\mlq y \mrq,\mlq x,F \mrq) $,\newline
+										$ (\star x \with R \spot P)[x \becomes F] = (\star x \with R[x \becomes F] \spot P[x \becomes F] $
+										
+\item[(8.13) Axiom, Empty range (where $u$ is the identity of $\star$):]	$ (\star x \with \false \spot P) = u $
+
+\item[(8.14) Axiom, One-point rule:]						Provided $ \lnot occurs(\mlq x \mrq, \mlq E \mrq) $,\newline
+										$ (\star x \with x = E \spot P) = P[x \becomes E] $
+
+\item[(8.15) Axiom, (Quantification) Distributivity:]				Provided each quantification is defined,\newline
+										$ (\star x \with R \spot P) \star (\star x \with R \spot Q) = (\star x \with R \spot P \star Q) $
+
+\item[(8.16) Axiom, Range split:]						Provided $ R \land S = \false $ and each quantification is defined,\newline
+										$ (\star x \with R \lor S \spot P) = (\star x \with R \spot P) \star (\star x \with S \spot P) $
+
+\item[(8.17) Axiom, Range split:]						Provided each quantification is defined,\newline
+										$ (\star x \with R \lor S \spot P) \star (\star x \with R \land S \spot P) = (\star x \with R \spot P) \star (\star x \with S \spot P) $
+
+\item[(8.18) Range split for idempotent $\star$:]				Provided each quantification is defined,\newline
+										$ (\star x \with R \lor S \spot P) = (\star x \with R \spot P) \star (\star x \with S \spot P) $
+
+\item[(8.19) Axiom, Interchange of dummies:]					Provided $ \lnot occurs (\mlq y \mrq, \mlq R \mlq)$ and $ \lnot occurs (\mlq x \mrq, \mlq S \mlq)$, and each quantification is defined,\newline 
+										$ (\star x \with R \spot (\star y \with S \spot P)) = (\star y \with R \spot (\star x \with S \spot P)) $
+
+\item[(8.20) Axiom, Nesting:]							Provided $ \lnot occurs (\mlq y \mrq, \mlq R \mlq)$,\newline	
+										$ (\star x,y \with R \land S \spot P) = (\star x \with R \spot (\star y \with S \spot P)) $
+
+\item[(8.20a) Axiom, Dummy list permutation:]					$ (\star x,y \with R \spot P) = (\star y,x \with R \spot P) $
+
+\item[(8.21) Axiom, Dummy renaming ($\alpha$ conversion):]			Provided $ \lnot occurs (\mlq y \mrq, \mlq R,P \mlq)$,\newline
+										$ (\star x \with R \spot P) = (\star y \with R[x \becomes y] \spot P[x \becomes y]) $
+
+\item[(8.22) Change of dummy:]							Provided $ f $ has an inverse and $ \lnot occurs (\mlq y \mrq, \mlq x,R,P \mlq)$,\newline
+										$ (\star x \with R \spot P) = (\star y \with R[x \becomes f.y] \spot P[x \becomes f.y]) $
+
+\item[(8.23) Theorem Split off term:]						For $n:\NN$ and dummies $i:\NN$,\newline			
+										$ (\star x \with 0 \leq i < n + 1 \spot P) = (\star x \with 0 \leq i < n \spot P) \star P[i \becomes n] $
+										\newline
+										$ (\star x \with 0 \leq i < n + 1 \spot P) = P[i \becomes 0] \star (\star i \with 0 < i < n + 1 \spot P) $
+\end{theoremlist}
+
+
+\section{Universal Quantification}
+
+\begin{theoremlist}
+\item[(9.2) Axiom, Trading:]							$ (\forall x \with R \spot P) \equiv (\forall x \withspot R \implies P) $
+\item[(9.3) Trading:]
+  \begin{theoremlist}
+  \item %intentionally blank
+  \item[(a)]									$ (\forall x \with R \spot P) \equiv (\forall x \withspot \lnot R \lor P) $
+  \item[(b)] 									$ (\forall x \with R \spot P) \equiv (\forall x \withspot R \land P \equiv R) $
+  \item[(c)] 									$ (\forall x \with R \spot P) \equiv (\forall x \withspot R \lor P \equiv P) $
+  \end{theoremlist}
+\item[(9.4) Trading:]
+  \begin{theoremlist}
+  \item %intentionally blank
+  \item[(a)]									$ (\forall x \with Q \land R \spot P) \equiv (\forall x \with Q \spot R \implies P) $
+  \item[(b)] 									$ (\forall x \with Q \land R \spot P) \equiv (\forall x \with Q \spot \lnot R \lor P) $
+  \item[(c)] 									$ (\forall x \with Q \land R \spot P) \equiv (\forall x \with Q \spot R \land P \equiv R) $
+  \item[(d)] 									$ (\forall x \with Q \land R \spot P) \equiv (\forall x \with Q \spot R \lor P \equiv P) $
+  \end{theoremlist}
+\item[(9.4.1) Universal double trading:]					$ (\forall x \with R \spot P) \equiv (\forall x \with P \spot R) $
+
+\item[(9.5) Axiom, Distributivity of $\lor$ over $\forall$:]			Provided $ \lnot occurs (\mlq x \mrq, \mlq P \mlq)$,\newline
+										$ P \lor (\forall x \with R \spot Q) \equiv (\forall x \with R \spot P \lor Q) $
+
+\item[(9.6)]									Provided $ \lnot occurs (\mlq x \mrq, \mlq P \mlq)$, 
+										$ (\forall x \with R \spot P) \equiv P (\forall x \withspot \lnot R) $
+
+\item[(9.7) Axiom, Distributivity of $\land$ over $\forall$:]			Provided $ \lnot occurs (\mlq x \mrq, \mlq P \mlq)$,\newline
+										$ \lnot(\forall \withspot \lnot R) \implies ((\forall x \with R \spot P \land Q) \equiv P \land (\forall x \with R \spot Q)) $
+
+\item[(9.8]									$ (\forall x \with R \spot \true) \equiv \true $
+\item[(9.9)]									$ (\forall x \with R \spot P \equiv Q) \implies ((\forall x \with R \spot P) \equiv (\forall x \with R \spot Q)) $
+\item[(9.10) Range weakening/strengthening:]					$ (\forall x \with R \lor Q \spot P) \implies (\forall x \with R \spot P) $   
+\item[(9.11) Body weakening/strengthening:]					$ (\forall x \with R \spot P \land Q) \implies (\forall x \with R \spot P) $   
+\item[(9.12) Monotonicity of $\forall$:]					$ (\forall x \with R \spot Q \implies P) \implies ((\forall x \with R \spot Q) \implies (\forall x \with R \spot P)) $
+\item[(9.12a) Range-antitonicity of $\forall$:]					$ (\forall x \withspot Q \implies R) \implies ((\forall x \with R \spot P) \implies (\forall x \with Q \spot P)) $
+\item[(9.13) Instantiation:]							$ (\forall x \withspot P) \implies P[x \becomes E] $   
+\item[(9.16) Metatheorem:]							$ P $ is a theorem iff $ (\forall x \withspot P) $ is a theorem. 
+
 
 \end{theoremlist}
+
+
+\section{Existential Quantification}
+
+\begin{theoremlist}
+\item[(9.17) Axiom, Generalized De Morgan:]					$ (\exists x \with R \spot P) \equiv \lnot (\forall x \with R \spot \lnot P) $
+\item[(9.18) Generalized De Morgan:]
+  \begin{theoremlist}
+  \item %intentionally blank
+  \item[(a)]									$ \lnot (\exists x \with R \spot \lnot P) \equiv (\forall x \with R \spot P) $
+  \item[(b)] 									$ \lnot (\exists x \with R \spot P) \equiv (\forall x \with R \spot \lnot P) $
+  \item[(c)] 									$ (\exists x \with R \spot \lnot P) \equiv \lnot(\forall x \with R \spot P) $
+  \end{theoremlist}
+\item[(9.19) Trading for $\exists$:]						$ (\exists x \with R \spot P) \equiv (\exists x \withspot R \land P) $
+\item[(9.20) Trading for $\exists$:]						$ (\exists x \with Q \land R \spot P) \equiv (\exists x \with Q \spot R \land P) $
+\item[(9.20.1) Existential double trading:]					$ (\exits x \with R \spot P) \equiv (\exits x \with P \spot R) $
+\item[(9.20.2)]									$  $
+\item[(9.21) Distributivity of $\land$ over $\exists$:]				$  $
+\item[(9.22)]									$  $
+\item[(9.23) Distributivity of $\lor$ over $\exists$:]				$  $
+\item[(9.24)]					$  $
+\item[(9.25) Range weakening/strengthening:]					$  $
+\item[(9.26) Body weakening/strengthening:]					$  $
+\item[(9.27) Monotonicity of $\exists$:]					$  $
+\item[(9.28) $\exists$ Introduction:]						$  $
+\item[(9.29) Interchange of quantifications:]					$  $
+\item[(9.30) Metatheorem Witness:]						$  $
+\item[(9.30v) Metatheorem Witness (variant):]					$  $
+
+\end{theoremlist}
+
+ 
 
 
 \end{document}
